@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DensityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="Density" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.density.DensityApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

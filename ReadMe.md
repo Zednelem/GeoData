@@ -4,21 +4,28 @@
 
 J'ai choisi de démarrer avec Spring Boot initializer pour inclure la dépendance web MVC uniquement
 
-## Organisation du projet
+## Description rapide
 
 
 Il s'agit d'une application spring.
 
 Cette application possède un unique controlleur exposant l'API Density
 
-route en local: localhost:8080/api/public/density/{count}/max
-
-avec un seul controlleur la liste des zones avec la plus forte densité
+route en local: localhost:8080/api/public/zones?size=4
 
 Il y a deux services qui pourraient se décomposer en microService
 
-## Definition d'une zone
+## Organisation du projet
 
-Étant donné le quadrillage de 0.5, un POI est dans une zone et une seule
+1. un package controllers pour l'api exposée
+2. Un package dto contenant le DTO de retour du controlleur   
+3. un package service contenant 2 services
+    * Un service reccupération de PointsOfInterest POI ( l'implémenttion va chercher dans les ressources de l'application src/main/resources)
+    * Un service d'opération sur les POI:
+        * getDensity :
+            renvoie la densité d'une zone passée en paramètre
+        * getMostDenseZonesWithSize: renvoie les zones les plus denses avec une taille maximum de liste renvoyé
+4. Un package model contenant la logique logique métier
 
-Faire tourner les tests OK
+### Couverture des tests = 88%
+
